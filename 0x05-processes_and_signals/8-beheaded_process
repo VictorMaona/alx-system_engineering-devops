@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# That kills the process. 
+id=$(pgrep -f './7-highlander')
+kill -s SIGKILL "$id"

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#  Bash displays word allows get PID.
+ps -a u | grep "bash"
