@@ -1,6 +1,4 @@
-100-textme.rb
-
 #!/usr/bin/env ruby
-# Show SENDER,RECEIVER,FLAGS
+# Show sender receiver and flags
 
-puts ARGV[0].scan(/\[from:(.*?)\] \[to:(.*?)\] \[flags:(.*?)\]/).join(",")
+puts ARGV[0].scan(/\[from:(.*?)\] \[to:(.*?)\] \[flags:(.*?)\]/).join(","
