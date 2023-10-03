@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/usr/bin/env ruby
 # Reveals a list of the active processes.
 
-echo $$
+regex = /School/
+puts ARGV[0].scan(regex).join
