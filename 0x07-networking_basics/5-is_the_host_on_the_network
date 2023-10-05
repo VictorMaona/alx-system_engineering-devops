@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+# Five times pings an IP address given as string input.
