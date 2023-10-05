@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Localhost port 98 reads telnet input and echos it back.
+
+nc -l localhost 98
