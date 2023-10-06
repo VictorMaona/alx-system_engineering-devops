@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
-# Configures new IP addresses for facebook.com and localhost. 8.8.8.8 and 127.0.0.2
-
-NEW_LOCALHOST_IP="127.0.0.2"
-NEW_FACEBOOK_IP="8.8.8.8"
-
+# Config new IP addresses for facebook and localhost.
+#   - facebook.com resolves 8.8.8.8
+#   - localhost resolves 127.0.0.2
 cp /etc/hosts ~/hosts.new
-sudo sed -i -e "/127\.0\.0\.1[[:space:]]localhost/ s/$/ $NEW_LOCALHOST_IP localhost/" /etc/hosts
-sudo sed -i "s/^0.0.0.0[[:space:]]facebook.com/$NEW_FACEBOOK_IP facebook.com/" /etc/hosts
+sed -i 's/127.*$/127.0.0.2 localhost\n8.8.8.8 facebook.com/' ~/hosts.new
+cp -f ~/hosts.new /etc/hosts
