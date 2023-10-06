@@ -1,9 +1,22 @@
 #!/usr/bin/env bash
-# Config new IP facebook and localhost 8.8.8.8 and 127.0.0.2
 
-NEW_LOCALHOST_IP="127.0.0.2"
-NEW_FACEBOOK_IP="8.8.8.8"
+# Check if the script is being run as root
+if [ "$(id -u)" -ne 0 ]; then
+  echo "This script must be run as root. Use 'sudo' before the script name."
+  exit 1
+fi
 
-cp /etc/hosts ~/hosts.new
-sudo sed -i -e "/127\.0\.0\.1[[:space:]]localhost/ s/$/ $NEW_LOCALHOST_IP localhost/" /etc/hosts
-sudo sed -i "s/^0.0.0.0[[:space:]]facebook.com/$NEW_FACEBOOK_IP facebook.com/" /etc/hosts
+# Define the new IP addresses
+new_localhost_ip="127.0.0.2"
+new_facebook_ip="8.8.8.8"
+
+# Modify the hosts file
+sed -i "s/^127\.0\.0\.1.*/$new_localhost_ip localhost/g" /etc/hosts
+sed -i "s/^.*facebook\.com.*/$new_facebook_ip facebook.com/g" /etc/hosts
+
+# Print a message to confirm the changes
+echo "IP addresses updated:"
+grep "localhost\|facebook.com" /etc/hosts
+
+# Flush DNS cache (for systemd-resolved)
+systemd-resolve --flush-caches
