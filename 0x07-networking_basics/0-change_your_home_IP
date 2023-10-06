@@ -20,3 +20,5 @@ grep "localhost\|facebook.com" /etc/hosts
 
 # Flush DNS cache (for systemd-resolved)
 systemd-resolve --flush-caches
+
+echo "Changes have been applied successfully."
