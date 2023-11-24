@@ -1,16 +1,16 @@
-# Puppet manifest to create a file in /tmp
+# To create a file in /tmp use the Puppet Manifest
 
-# Declare a file resource with the path '/tmp/school'
+# Declare the path '/tmp/school' for the file resource.
 file { '/tmp/school':
-  # Specify the content of the file
+  # Indicate what in the file.
   content => 'I love Puppet',
 
-  # Set the file permissions to 0744
+  # File permissions should be set to 0744.
   mode    => '0744',
 
-  # Set the owner of the file to 'www-data'
+  # Make 'www-data' the file owner.
   owner   => 'www-data',
 
-  # Set the group of the file to 'www-data'
+  # Configure the file group to 'www-data'.
   group   => 'www-data',
 }
