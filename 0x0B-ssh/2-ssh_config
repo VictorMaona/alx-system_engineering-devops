@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Check existence of SSH client config
+touch ~/.ssh/config
+
+# File with the configuration settings.
+cat <<EOL >> ~/.ssh/config
+Host your_server_ip
+  IdentityFile ~/.ssh/school
+  PasswordAuthentication no
+EOL
