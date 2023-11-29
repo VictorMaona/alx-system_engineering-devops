@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # Set up a web server with Nginx and listen on port 80.
-# Use "Hello World" to create a default index.html file.
 
 sudo apt-get -y update
 sudo apt-get -y install nginx
