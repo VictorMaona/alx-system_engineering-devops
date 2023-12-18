@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # sets up firewall with UFW to prevent any incoming traffic.
-#+ not including TCP ports 22, 443, and 80.
+# not including TCP ports 22, 443, and 80.
 
 apt-get install ufw
 sed -i 's/IPV6=.*/IPV6=yes/' /etc/default/ufw
