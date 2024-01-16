@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-0-subs gets the amount of subscribers for a specific subreddit.
+0 subs gets the amount of subscribers for a specific subreddit.
 """
 
 import requests
