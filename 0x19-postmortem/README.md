@@ -1,6 +1,7 @@
-Postmortem Report: Comprehensive Analysis of a Service Outage 
+**Postmortem Report: Comprehensive Analysis of a Service Outage**
+
 Incident
-Issue Summary: A severe service outage unfolded on January 18, 2024, lasting from 14:00 to 19:00 UTC. During this period, a substantial increase in 500 errors occurred, reaching a peak error rate of 100%. The incident stemmed from a complex interplay of factors involving unexpected traffic patterns, database connection issues, and insufficient failover mechanisms.  
+**Issue Summary** : A severe service outage unfolded on January 18, 2024, lasting from 14:00 to 19:00 UTC. During this period, a substantial increase in 500 errors occurred, reaching a peak error rate of 100%. The incident stemmed from a complex interplay of factors involving unexpected traffic patterns, database connection issues, and insufficient failover mechanisms.  
 •	Short Summary:
 •	This postmortem report delves into a service outage on January 18th, 2024, impacting our system with a surge of 500 errors, causing severe disruptions to user experience.
 •	Duration: The incident occurred from January 18, 2024, 14:00 UTC to January 18, 2024, 19:00 UTC.
